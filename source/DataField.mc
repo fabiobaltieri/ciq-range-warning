@@ -33,7 +33,7 @@ class DataField extends WatchUi.SimpleDataField {
 
 	function initialize() {
 		SimpleDataField.initialize();
-		label = "2k Warning";
+		label = "Range Warning";
 
 		range_field = createField(
 				"battery", 0, FitContributor.DATA_TYPE_SINT32,

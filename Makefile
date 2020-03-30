@@ -1,7 +1,7 @@
 SDK_PATH = $(HOME)/ciq/bin
 KEY = $(HOME)/ciq/key/developer_key.der
 
-NAME = 2k-warning
+NAME = range-warning
 
 JUNGLE = monkey.jungle
 ifeq ($(DEVICE),)
