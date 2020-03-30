@@ -35,7 +35,7 @@ class DataField extends WatchUi.SimpleDataField {
 		label = "Range Warning";
 
 		range_field = createField(
-				"battery", 0, FitContributor.DATA_TYPE_SINT32,
+				"range", 0, FitContributor.DATA_TYPE_SINT32,
 				{:mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>"m"});
 	}
 
