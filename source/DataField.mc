@@ -11,6 +11,8 @@ class DataField extends WatchUi.SimpleDataField {
 	const LIMIT = 2000;
 	const THRESHOLD = 50;
 
+	var range_field;
+
 	function maybe_warn(distance) {
 		System.println(distance + " " + repeat);
 		if (distance > THRESHOLD) {
@@ -32,6 +34,10 @@ class DataField extends WatchUi.SimpleDataField {
 	function initialize() {
 		SimpleDataField.initialize();
 		label = "2k Warning";
+
+		range_field = createField(
+				"battery", 0, FitContributor.DATA_TYPE_SINT32,
+				{:mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>"m"});
 	}
 
 	// From: https://forums.garmin.com/developer/connect-iq/f/discussion/1095/calculate-distance-between-two-positions
@@ -71,6 +77,7 @@ class DataField extends WatchUi.SimpleDataField {
 
 		maybe_warn(range);
 
+		range_field.setData(range);
 		return range.format("%.0f");
 	}
 }

@@ -6,6 +6,7 @@
         </iq:products>
         <iq:languages/>
 	<iq:permissions>
+		<iq:uses-permission id="FitContributor"/>
 		<iq:uses-permission id="Positioning"/>
 	</iq:permissions>
     </iq:application>
