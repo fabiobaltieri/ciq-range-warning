@@ -14,7 +14,6 @@ class DataField extends WatchUi.SimpleDataField {
 	var range_field;
 
 	function maybe_warn(distance) {
-		System.println(distance + " " + repeat);
 		if (distance > THRESHOLD) {
 			repeat = REPEAT_RESET;
 			return;
