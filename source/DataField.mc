@@ -6,8 +6,8 @@ using Toybox.Attention;
 using Toybox.Position;
 
 class DataField extends WatchUi.SimpleDataField {
-	var repeat;
 	const REPEAT_RESET = 5;
+	var repeat = REPEAT_RESET;
 	const LIMIT = 2000;
 	const THRESHOLD = 50;
 
