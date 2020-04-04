@@ -11,4 +11,20 @@
 			fillColor="#ff2200"
 			/>
 	</fitContributions>
+
+	<properties>
+		<property id="range" type="number">2000</property>
+	</properties>
+
+	<strings>
+		<string id="rangeTitle">Range (m)</string>
+		<string id="rangePrompt">Range in meters</string>
+	</strings>
+
+	<settings>
+		<setting propertyKey="@Properties.range" title="@Strings.rangeTitle" prompt="@Strings.rangePrompt">
+			<settingConfig type="numeric" min="1" max="99999" />
+		</setting>
+	</settings>
+
 </resources>

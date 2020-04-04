@@ -17,6 +17,7 @@ all: $(NAME).prg
 
 clean:
 	rm -f $(NAME)-fit_contributions.json
+	rm -f $(NAME)-settings.json
 	rm -f $(NAME).iq
 	rm -f $(NAME).prg
 	rm -f $(NAME).prg.debug.xml

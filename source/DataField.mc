@@ -8,7 +8,7 @@ using Toybox.Position;
 class DataField extends WatchUi.SimpleDataField {
 	const REPEAT_RESET = 5;
 	var repeat = REPEAT_RESET;
-	const LIMIT = 2000;
+	var limit;
 	const THRESHOLD = 50;
 
 	var range_field;
@@ -33,6 +33,8 @@ class DataField extends WatchUi.SimpleDataField {
 	function initialize() {
 		SimpleDataField.initialize();
 		label = "Range Warning";
+
+		limit = Application.getApp().getProperty("range");
 
 		range_field = createField(
 				"range", 0, FitContributor.DATA_TYPE_SINT32,
@@ -68,11 +70,15 @@ class DataField extends WatchUi.SimpleDataField {
 		var start = info.startLocation;
 		var range;
 
-		if (cur == null || start == null) {
+		if (start == null) {
+			return limit;
+		}
+
+		if (cur == null) {
 			return "---";
 		}
 
-		range = LIMIT - distance_points(cur.toRadians(), start.toRadians());
+		range = limit - distance_points(cur.toRadians(), start.toRadians());
 
 		maybe_warn(range);
 
