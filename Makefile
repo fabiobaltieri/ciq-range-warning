@@ -1,15 +1,16 @@
-SDK_PATH = $(HOME)/ciq/bin
-KEY = $(HOME)/ciq/key/developer_key.der
+SDK_PATH = $(HOME)/ciq
+KEY = $(SDK_PATH)/key/developer_key.der
 
 NAME = range-warning
+APP_ID = 5a6ad56b-4489-4f8f-a833-e54b7223c3d1
 
 JUNGLE = monkey.jungle
 ifeq ($(DEVICE),)
 DEVICE = fr230
 endif
 
-MONKEYC = $(SDK_PATH)/monkeyc
-MONKEYDO = $(SDK_PATH)/monkeydo
+MONKEYC = $(SDK_PATH)/bin/monkeyc
+MONKEYDO = $(SDK_PATH)/bin/monkeydo
 
 .PHONY: all clean sim graph
 
@@ -32,4 +33,7 @@ sim: $(NAME).prg
 	$(MONKEYDO) $(NAME).prg $(DEVICE)
 
 graph:
-	java -jar $(SDK_PATH)/fit-graph.jar
+	java -jar $(SDK_PATH)/bin/fit-graph.jar
+
+era:
+	$(SDK_PATH)/bin/era -k $(KEY) -a $(APP_ID)
