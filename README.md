@@ -11,3 +11,10 @@ It also records the range in a separate Fit field that shows up on Garmin
 Connect.
 
 https://apps.garmin.com/en-US/apps/5a6ad56b-4489-4f8f-a833-e54b7223c3d1
+
+## License
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
