@@ -1,5 +1,5 @@
 SDK_PATH = $(HOME)/ciq
-KEY = $(HOME)/.Garmin/key/developer_key.der
+KEY = developer_key.der
 
 NAME = range-warning
 APP_ID = 5a6ad56b-4489-4f8f-a833-e54b7223c3d1
